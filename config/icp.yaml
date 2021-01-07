@@ -1,0 +1,21 @@
+data:
+  origin_file: 'data/deform.xyz'
+  target_file: 'data/origin.xyz'
+
+  synthetic:
+    use: True
+    num_points: 100
+    num_test: 100
+    data_dim: 3
+    noise_sigma: 0.01
+    rotation_scale: 0.1
+    translation_scale: 0.1
+    shuffle: True
+
+icp:
+  allow_error: 0.06 # k倍的noise_sigma
+  output_folder: 'output/'
+
+registration:
+  num_iteration: 30
+  tolerance: 0.000000001
